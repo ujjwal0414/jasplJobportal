@@ -67,7 +67,7 @@ const Report =()=>{
                 progress: null,
                 theme: "dark",
                 });
-          let response = await fetch(`${backendUrl}sendmail/${email}`);
+          let response = await fetch(`https://jobexbackend.onrender.com/sendmail/${email}`);
          // alert("Sent mail to shortlisted candidate");
          response=await response.json();
          if(response.success){

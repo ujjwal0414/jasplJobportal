@@ -19,6 +19,14 @@ function App() {
         document.body.style.overflow="scroll"
        }
   },[showSideBar])
+  useEffect(()=>{
+    if(newStatus){
+      document.body.style.overflow="hidden"
+     }
+     else{
+      document.body.style.overflow="scroll"
+     }
+  },[newStatus])
   return (
     <> 
     {newStatus &&<div className="absolute top-0 left-0 w-[100%] h-[100vh] bg-slate-100  z-20 flex  justify-center items-center ">
