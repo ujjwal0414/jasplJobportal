@@ -21,6 +21,14 @@ function App() {
   },[showSideBar])
   useEffect(()=>{
     if(newStatus){
+     document.body.style.overflow="hidden"
+    }
+    else{
+     document.body.style.overflow="scroll"
+    }
+},[newStatus])
+  useEffect(()=>{
+    if(newStatus){
       document.body.style.overflow="hidden"
      }
      else{
