@@ -1,0 +1,47 @@
+import { IoHome,IoFolderOpenSharp,IoPersonCircle } from "react-icons/io5";
+import { Profile } from "./profile";
+import { Report } from "./Reports";
+import { Project } from "./projects";
+import { PiMapPinDuotone } from "react-icons/pi";
+import { Update } from "./uodates";
+import { GrUpdate } from "react-icons/gr";
+const Navigate=(props)=>{
+   
+    let linkName=[
+        {
+            name:"Home",
+            Icon:<IoHome  className=" ml-3 mr-2"/>,
+            component:<Report/>
+        },
+        {
+            name:"Jobs",
+            Icon:<PiMapPinDuotone  className=" ml-3 mr-2"/>,
+            component:<Project/>
+        },
+        {
+            name:"Profile",
+            Icon:<IoPersonCircle  className=" ml-3 mr-2"/>,
+            component:<Profile/>
+        },
+        {
+            name:"Page Updates",
+            Icon:<GrUpdate  className=" ml-3 mr-2"/>,
+            component:<Update/>
+        }
+
+    ]
+    return(
+        <div className={`md:w-[20%] w-[80%] md:static absolute h-[85%] md:h-[80vh] z-10 bg-slate-300 rounded-r-3xl flex justify-center pb-4 transition-all ease-in duration-300 ${props.showside?"left-0":"-left-[100%]"}`}>
+            <div className="w-[80%] flex flex-col ">
+                <h2 className="text-2xl mt-2 ml-3 mb-6">Navigate</h2>
+                <div className="flex flex-col">
+                    {
+                        linkName.map(item=><div  key={item.name} onClick={()=>{props.setComponent(item.component);props.setSideBar(!props.showside)}}  className="flex font-semibold items-center py-3 mb-2 hover:bg-slate-600 hover:text-white rounded-lg transform cursor-pointer">{item.Icon} {item.name}</div>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
+export {Navigate}
