@@ -11,7 +11,7 @@ let Nlp=(props)=>{
     async function query() {
       setLoader(true)
        try{
-        console.log(process.env.REACT_APP_NLP);
+      
         const response = await fetch(
             "https://api-inference.huggingface.co/models/SamLowe/roberta-base-go_emotions",
             {
