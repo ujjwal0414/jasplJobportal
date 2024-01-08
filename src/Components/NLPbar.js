@@ -15,7 +15,11 @@ let Nlp=(props)=>{
         const response = await fetch(
             "https://api-inference.huggingface.co/models/SamLowe/roberta-base-go_emotions",
             {
+
                 headers: { Authorization: "Bearer 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" },
+
+               
+
                 method: "POST",
                 body: JSON.stringify({"inputs":`${props.nlpval}`}),
             }
