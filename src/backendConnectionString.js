@@ -1,2 +1,2 @@
-let backendUrl="http://localhost:7000/"
+let backendUrl="https://jobexbackend.onrender.com"
 export {backendUrl}
