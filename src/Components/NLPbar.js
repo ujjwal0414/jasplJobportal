@@ -11,10 +11,11 @@ let Nlp=(props)=>{
     async function query() {
       setLoader(true)
        try{
+        console.log(process.env.REACT_APP_NLP);
         const response = await fetch(
             "https://api-inference.huggingface.co/models/SamLowe/roberta-base-go_emotions",
             {
-                headers: { Authorization: process.env.nlpapikey },
+                headers: { Authorization: "Bearer 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" },
                 method: "POST",
                 body: JSON.stringify({"inputs":`${props.nlpval}`}),
             }
