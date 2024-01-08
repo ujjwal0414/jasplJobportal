@@ -16,7 +16,7 @@ let Nlp=(props)=>{
             "https://api-inference.huggingface.co/models/SamLowe/roberta-base-go_emotions",
             {
 
-                headers: { Authorization: "Bearer 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" },
+                headers: { Authorization: process.env.REACT_APP_NLP },
 
                
 
