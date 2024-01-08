@@ -26,7 +26,7 @@ const Update=()=>{
         <div className="w-[95%] mt-6">
             <div className="text-xl font-semibold">Page Responsiveness
             </div>
-            <div className="text-slate-700 text-sm">Currently this web page is not made reflexive so it might not look good in mobile phones but if time allows it will be made accordingly so that the page appears responsive on different devices.</div>
+            <div className="text-slate-700 text-sm">Currently this web page is not made responsive so it might not look good in mobile phones but if time allows it will be made accordingly so that the page appears responsive on different devices.</div>
             
         </div>
         <div className="w-[95%] mt-6">
