@@ -11,22 +11,22 @@ const Navigate=(props)=>{
         {
             name:"Home",
             Icon:<IoHome  className=" ml-3 mr-2"/>,
-            component:<Report/>
+            component:<Report index={0}/>
         },
         {
             name:"Jobs",
             Icon:<PiMapPinDuotone  className=" ml-3 mr-2"/>,
-            component:<Project/>
+            component:<Project index={1}/>
         },
         {
             name:"Profile",
             Icon:<IoPersonCircle  className=" ml-3 mr-2"/>,
-            component:<Profile/>
+            component:<Profile index={2}/>
         },
         {
             name:"Page Updates",
             Icon:<GrUpdate  className=" ml-3 mr-2"/>,
-            component:<Update/>
+            component:<Update index={3}/>
         }
 
     ]
@@ -36,7 +36,11 @@ const Navigate=(props)=>{
                 <h2 className="text-2xl mt-2 ml-3 mb-6">Navigate</h2>
                 <div className="flex flex-col">
                     {
-                        linkName.map(item=><div  key={item.name} onClick={()=>{props.setComponent(item.component);props.setSideBar(!props.showside)}}  className="flex font-semibold items-center py-3 mb-2 hover:bg-slate-600 hover:text-white rounded-lg transform cursor-pointer">{item.Icon} {item.name}</div>
+                        linkName.map((item,pos)=>{
+                            return(
+                                <div  key={pos} onClick={()=>{props.setComponent(item.component);props.setSideBar(!props.showside)}}  className={`flex font-semibold items-center py-3 mb-2 hover:bg-slate-600 hover:text-white rounded-lg transform cursor-pointer ${props.index==pos?"bg-slate-600 text-white":""}`}>{item.Icon} {item.name}</div>
+                            )
+                        }
                         )
                     }
                 </div>
