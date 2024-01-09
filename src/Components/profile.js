@@ -95,6 +95,7 @@ const Profile=()=>{
        }
          }
       };
+      //added commits on first load
       const deleteImageFromStorage = () => {
         setLoader(true)
         let profilepic=localStorage.getItem("ppic");
@@ -129,6 +130,8 @@ const Profile=()=>{
                 theme: "dark",
                 });
                 setLoader(false);
+                setImageUrl(`https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png`);
+
         });
 
       };
