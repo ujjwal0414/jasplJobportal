@@ -6,7 +6,7 @@ const Update=()=>{
     <div className="w-[95%] bg-slate-200  overflow-y-auto rounded-lg flex flex-col items-center pb-6">
         <div className="w-[95%] mt-6">
             <div className="text-2xl font-semibold">Profile Page</div>
-            <div className="text-slate-700 text-sm">Dear User, the profile page component is still not completed due to the time limitations but in future if possiblw many functionalities will be added thus enhancing the user experience.</div>
+            <div className="text-slate-700 text-sm">Dear User, the profile page component is still not completed due to the time limitations but in future if possiblw many functionalities will be added thus enhancing the user experience.But currently you will be able to update your photo and delete it too.</div>
             <ul>
                 <li className="text-slate-800 text-sm font-semibold">In the users description a ML model might be implemented which will fetch job/internship according to user preferences.</li>
             </ul>
