@@ -156,7 +156,7 @@ else{
                         <img  draggable="false" src={`${imageUrl?imageUrl:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}`} alt="pic" className="md:w-[29vh] w-[22vh]  md:h-[29vh]  h-[22vh] rounded-full object-cover"/>
                        </div>
                        <div onClick={setPic} className="absolute md:translate-x-[10vh] translate-x-[8vh] md:translate-y-[10vh] translate-y-[8vh] bg-indigo-700 p-2 rounded-full  cursor-pointer"><FaCameraRetro className={`text-white ${localStorage.getItem("ppic")?"cursor-not-allowed":"cursor-pointer"}`}/></div>
-                       <input disabled={localStorage.getItem("ppic")?true:false} ref={pref} type="file" onChange={handleImageChange} className="hidden"/>
+                       <input disabled={localStorage.getItem("ppic")?true:false} ref={pref} type="file" accept="image/png, image/gif, image/jpeg,image/jpg" onChange={handleImageChange} className="hidden"/>
                       </div>
                      <div className="absolute bottom-2 right-2">{!localStorage.getItem("ppic") && <button disabled={image?false:true} className={`bg-indigo-700 text-white rounded-md p-2 ${image==null?"cursor-not-allowed":"cursor-pointer"}`} onClick={handleUpload}>{loader?<LuLoader2 className=" transition-all animate-spin"/>:"Upload"}</button>}{localStorage.getItem("ppic") && <button className="bg-indigo-600 text-white rounded-md p-2 " onClick={deleteImageFromStorage}>{loader?<LuLoader2 className="transition-all animate-spin"/>:"Delete"}</button>}</div>
                 </div>
