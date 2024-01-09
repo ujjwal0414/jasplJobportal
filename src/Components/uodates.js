@@ -35,6 +35,12 @@ const Update=()=>{
             <div className="text-slate-700 text-sm">Every User card component has been provided with a Get analysis button which will classify his/her preference of emotions and it's score .Its using an nlp api for this,but if in future you are unable to access the sentiments kindly contact so that new api pin can be generated for availing the api.</div>
             
         </div>
+        <div className="w-[95%] mt-6">
+            <div className="text-xl font-semibold">Soon Dark mode feature will be added soon.
+            </div>
+            <div className="text-slate-700 text-sm">Currently website is using white background ,soon a dark mode feature will be available allowing user to toogle between two contrasts.</div>
+            
+        </div>
     </div>
    </div>
    )
