@@ -36,7 +36,7 @@ const Update=()=>{
             
         </div>
         <div className="w-[95%] mt-6">
-            <div className="text-xl font-semibold">Soon Dark mode feature will be added soon.
+            <div className="text-xl font-semibold">Dark mode feature.
             </div>
             <div className="text-slate-700 text-sm">Currently website is using white background ,soon a dark mode feature will be available allowing user to toogle between two contrasts.</div>
             
