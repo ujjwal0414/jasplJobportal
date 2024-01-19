@@ -10,7 +10,7 @@ const Navigators=({showside,setSideBar})=>{
     return(
         <div className="min-h-[30vh]  w-[100%] flex justify-between mt-4 ">
             <Navigate setComponent={setComponent} showside={showside} setSideBar={setSideBar} index={currentComponent.props.index} />
-            {showside && <div onClick={()=>{setSideBar(!showside)}} className="w-[100%] h-[100vh] md:hidden block absolute left-0 bg-gradient-to-b from-gray-50 to-gray-500 z-8 opacity-60"></div>}
+            {showside && <div onClick={()=>{setSideBar(!showside)}} className="w-[100%] h-[100vh] md:hidden block absolute left-0 bg-gradient-to-b from-gray-50 to-gray-500 z-10 opacity-60"></div>}
             {currentComponent}
         </div>
     )

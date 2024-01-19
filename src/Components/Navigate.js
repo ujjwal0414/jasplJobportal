@@ -31,7 +31,7 @@ const Navigate=(props)=>{
 
     ]
     return(
-        <div className={`md:w-[20%] w-[80%] md:static absolute h-[85%] md:h-[80vh] z-10 bg-slate-300 rounded-r-3xl flex justify-center pb-4 transition-all ease-in duration-300 ${props.showside?"left-0":"-left-[100%]"}`}>
+        <div className={`md:w-[20%] w-[80%] md:static absolute h-[85%] md:h-[80vh] z-20 bg-slate-300 rounded-r-3xl flex justify-center pb-4 transition-all ease-in duration-300 ${props.showside?"left-0":"-left-[100%]"}`}>
             <div className="w-[80%] flex flex-col ">
                 <h2 className="text-2xl mt-2 ml-3 mb-6">Navigate</h2>
                 <div className="flex flex-col">

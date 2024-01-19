@@ -116,7 +116,7 @@ const Report = () => {
     }
 
     return (
-        <div className="md:w-[80%] w-[100%] lg:h-[80vh]  flex  justify-center">
+        <div className="md:w-[80%] w-[100%] lg:h-[80vh]  flex  justify-center ">
             <div className="w-[95%] bg-slate-100 min-h-[80vh]   overflow-y-auto rounded-lg overflow-x-hidden pb-3">
                 <div className="flex lg:flex-row flex-col lg:justify-between py-5 lg:items-center items-start">
                     <h2 className="lg:ml-[2vw] ml-[3vw] text-2xl font-semibold w-[93%] md:w-[10vw]">Candidates</h2>
