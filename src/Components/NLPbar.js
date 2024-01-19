@@ -79,7 +79,6 @@ let Nlp=(props)=>{
         
         <p className="text-sm ml-2"><span className="font-semibold">Score</span> : {sc===null?"":sc[3]["score"]>0.1?Math.round(sc[3]["score"]*10):0}</p>
         </div>
-
         </div>}
     </p>
  )
