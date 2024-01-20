@@ -45,7 +45,7 @@ const Navigate=(props)=>{
                         )
                     }
                 </div>
-                <div className="md:hidden block" onClick={()=>{props.setDarkModeStat(!props.darkModeStat);props.setSideBar(!props.showside)}}><CustomizedSwitches /></div>
+                <div className="md:hidden block" onClick={()=>{props.setDarkModeStat(!props.darkModeStat);props.setSideBar(!props.showside)}}><CustomizedSwitches open={props.darkModeStat}  /></div>
 
             </div>
         </div>
