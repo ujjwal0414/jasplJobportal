@@ -59,11 +59,11 @@ useEffect(()=>{
 
   return (
     <> 
-    {newStatus &&<div className="absolute top-0 left-0 w-[100%] h-[100vh] bg-slate-100  z-20 flex  justify-center items-center ">
-      <div className='bg-white opacity-100 text-black md:w-[80vw] w-[90vw] h-[80vh] shadow-slate-400 shadow-lg rounded-md '>
-        <div className='flex py-5 items-center justify-between'>
+    {newStatus &&<div className="absolute top-0 left-0 w-[100%] h-[100vh] bg-slate-100  dark:bg-[#293555] z-30 flex  justify-center items-center ">
+      <div className='bg-white  dark:bg-[#314168] dark:shadow-none opacity-100 text-black md:w-[80vw] w-[90vw] h-[80vh] shadow-slate-400 shadow-lg rounded-md '>
+        <div className='flex py-5 items-center justify-between dark:text-white'>
           <div className='ml-8 font-semibold text-2xl'>Create Job</div>
-          <div className='mr-8 text-slate-500'><ImCross className='cursor-pointer' onClick={()=>{setStatus(!newStatus)}} /></div>
+          <div className='mr-8 text-slate-500 dark:text-white'><ImCross className='cursor-pointer' onClick={()=>{setStatus(!newStatus)}} /></div>
         </div>
       <FileSection newStatus={newStatus} setStatus={setStatus}/>
       </div>
