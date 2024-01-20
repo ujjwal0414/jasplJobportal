@@ -8,8 +8,21 @@ function App() {
   let [newStatus,setStatus]=useState(false)
   let [desc,setDesc]=useState(false);
   let [showSideBar,setSideBar]=useState(false);
+  let [themeMode,setTheme]=useState(false);
   useEffect(()=>{
     setDesc(false)
+    let theme=localStorage.getItem("jasplTheme");
+    if(theme){
+     let themeStat= localStorage.getItem("jasplTheme")
+      themeStat=themeStat==="true"?true:false   
+      setTheme(themeStat)   
+    }
+    else{
+      localStorage.setItem("jasplTheme",false)
+    }
+    
+   
+    
   },[])
   useEffect(()=>{
        if(showSideBar){
@@ -27,6 +40,22 @@ function App() {
      document.body.style.overflow="scroll"
     }
 },[newStatus])
+useEffect(()=>{
+
+     if(themeMode){
+      document.documentElement.classList.add("dark");
+      document.body.style.backgroundColor="#1c253b";
+      localStorage.setItem("jasplTheme",true)
+     
+     }
+     else{
+      document.documentElement.classList.remove("dark");
+      document.body.style.backgroundColor="white";
+      localStorage.setItem("jasplTheme",false)
+     
+     }
+     
+},[themeMode])
 
   return (
     <> 
@@ -53,8 +82,8 @@ function App() {
 
 }  
 /
-    <NavBar status={newStatus} setStatus={setStatus} setSideBar={setSideBar} showside={showSideBar} />
-    <Navigators showside={showSideBar} setSideBar={setSideBar}  />
+    <NavBar darkModeStat={themeMode} setDarkModeStat={setTheme} status={newStatus} setStatus={setStatus} setSideBar={setSideBar} showside={showSideBar} />
+    <Navigators darkModeStat={themeMode} setDarkModeStat={setTheme} showside={showSideBar} setSideBar={setSideBar}  />
     </>
   );
 }

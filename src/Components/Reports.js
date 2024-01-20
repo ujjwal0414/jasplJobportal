@@ -117,16 +117,16 @@ const Report = () => {
 
     return (
         <div className="md:w-[80%] w-[100%] lg:h-[80vh]  flex  justify-center ">
-            <div className="w-[95%] bg-slate-100 min-h-[80vh]   overflow-y-auto rounded-lg overflow-x-hidden pb-3">
+            <div className="w-[95%] bg-slate-100 dark:bg-[#222c45] border-2 dark:border-[#485c8a] min-h-[80vh]   overflow-y-auto rounded-lg overflow-x-hidden pb-3 Reports">
                 <div className="flex lg:flex-row flex-col lg:justify-between py-5 lg:items-center items-start">
-                    <h2 className="lg:ml-[2vw] ml-[3vw] text-2xl font-semibold w-[93%] md:w-[10vw]">Candidates</h2>
-                    <div className="lg:mr-[2vw] ml-[3vw] lg:mt-0 mt-3 flex gap-2 items-center hover:border hover:border-black bg-white p-3 rounded-lg shadow-slate-200 shadow-md w-[93%] md:w-[30vw]"><LiaSearchSolid className="text-2xl font-bold" /><input disabled={response !== null ? false : true} type="text" className={`bg-transparent border-none outline-0 ${response !== null ? "cursor-default" : "cursor-not-allowed"} md:w-auto w-[100%]`} placeholder="Search by Job or Candidate name..." /></div>
+                    <h2 className="lg:ml-[2vw] ml-[3vw] text-2xl font-semibold w-[93%] md:w-[10vw] dark:text-white">Candidates</h2>
+                    <div className="lg:mr-[2vw] ml-[3vw] lg:mt-0 mt-3 flex gap-2 items-center hover:border hover:border-black bg-white dark:bg-[#445888] dark:shadow-none dark:text-white p-3 rounded-lg shadow-slate-200 shadow-md w-[93%] md:w-[30vw]"><LiaSearchSolid className="text-2xl font-bold" /><input disabled={response !== null ? false : true} type="text" className={`bg-transparent border-none outline-0 dark:placeholder:text-white ${response !== null ? "cursor-default" : "cursor-not-allowed"}   w-[100%]`} placeholder="Search by Job or Candidate name..." /></div>
                 </div>
                 <div className={`${response?"grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-evenly ml-5 mr-5 mt-5":""}`}>
                     {
                         response ? response.map((item, pos) => {
                             return (
-                                <div key={pos} className="bg-slate-300 md:min-h-[45vh]  rounded-lg flex flex-col justify-between shadow-slate-500 hover:shadow-xl relative">
+                                <div key={pos} className="bg-slate-300 dark:bg-[#4e5b7d] dark:text-white md:min-h-[45vh]  rounded-lg flex flex-col justify-between shadow-slate-500 hover:shadow-xl relative">
                                     
                                        <div>
                                        <h3 className="flex items-center ml-3 mt-3 font-semibold text-lg justify-between">Name : {item.Name}<span className="text-xs float-right mr-4">Date : {item.Timestamp.substring(0, 10)}</span></h3>
@@ -144,7 +144,7 @@ const Report = () => {
                                         </p>
                                         <p className="ml-3">
                                             <p className="text-md font-semibold underline">Description</p>
-                                            <p className="text-sm text-gray-700"> {item["Why are you applying for this position?"]}</p>
+                                            <p className="text-sm text-gray-700 dark:text-[#d8d7d8]"> {item["Why are you applying for this position?"]}</p>
                                         </p>
                                        </div>
                                        {/*Only description part will be here and ends */}
@@ -153,12 +153,12 @@ const Report = () => {
                                             <Nlp username={item.Name} position={pos} nlpval={item["Why are you applying for this position?"]} />
                                         </p>
                                    
-                                    <div className="mb-2 md: md:bottom-0">  <button onClick={() => { sendEmail(item.Email, pos) }} className="ml-3 mt-2 p-2 bg-indigo-700 text-white rounded-lg">{mailStatus && cardindex === pos ? <LuLoader2 className="transition-transform animate-spin" /> : "Shortlist Candidate"}</button></div>
+                                    <div className="mb-2 md: md:bottom-0">  <button onClick={() => { sendEmail(item.Email, pos) }} className="ml-3 mt-2 p-2 bg-indigo-700 dark:bg-indigo-800 text-white rounded-lg">{mailStatus && cardindex === pos ? <LuLoader2 className="transition-transform animate-spin" /> : "Shortlist Candidate"}</button></div>
                                         </div>
                                     <ToastContainer />
                                 </div>
                             )
-                        }) : <h2 className="w-[100%] text-center flex justify-center text-3xl"><BiLoaderAlt className="transition-all animate-spin duration-infinite ease-in"/></h2>
+                        }) : <h2 className="w-[100%] text-center flex justify-center text-3xl dark:text-white"><BiLoaderAlt className="transition-all animate-spin duration-infinite ease-in"/></h2>
                     }
 
 
