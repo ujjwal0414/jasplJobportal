@@ -90,14 +90,14 @@ let ChatContainer = ({ user }) => {
                                    if(item.data.displayName==userName){
                                     return (
                                         <div className="flex justify-end mt-2  md:mt-1  items-center">
-                                            <span className="mr-3 dark:bg-slate-600 border-2 dark:border-[#8ca2d7] font-semibold bg-slate-700 text-white max-w-[70%] md:max-w-[60%]  py-1 px-3 rounded-xl">{item.data.text}</span><img alt="log" src={item.data.url} className="w-[20px] h-[20px] rounded-full" />
+                                            <span className="mr-3 dark:bg-slate-600 border-2 dark:border-[#8ca2d7] font-semibold bg-slate-700 text-white max-w-[70%] md:max-w-[60%]  py-1 px-3 rounded-xl">{item.data.text}</span><img alt="log" src={item.data.url} className="md:w-[25px] md:h-[25px] w-[30px] h-[30px] rounded-full" />
                                         </div>
                                     )
                                    }
                                    else{
                                     return (
                                         <div className="flex md:mt-1 mt-2 justify-start items-center">
-                                           <img alt="log" src={item.data.url} className="w-[20px] h-[20px] rounded-full" /> 
+                                           <img alt="log" src={item.data.url} className="md:w-[25px] md:h-[25px] w-[30px] h-[30px]  rounded-full" /> 
                     <span className="ml-3 bg-slate-200 text-black font-semibold max-w-[70%] md:max-w-[60%] py-1 px-3 rounded-xl">{item.data.text}</span>
                 </div>
                                     )
