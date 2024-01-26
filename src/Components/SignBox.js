@@ -27,7 +27,7 @@ useEffect(()=>{
 },[])
     return(
         <Modal  open={true} className="grid place-items-center " >
-      <div className="bg-white dark:bg-slate-700 rounded-lg w-[90vw]  md:min-w-[30vw] md:min-h-[20vh]  min-h-[20vh] border-none flex flex-col items-center justify-evenly">
+      <div className="bg-white dark:bg-slate-700 rounded-lg w-[90vw]  md:w-[30vw] md:min-h-[20vh]  min-h-[20vh] border-none flex flex-col items-center justify-evenly">
       <div className="w-[90%] dark:text-white">
         <p>Username</p>
         <input type="text" readOnly value={userName} onChange={(e)=>{setName(e.target.value)}} required={true} className="w-[100%] outline-none border-2 dark:bg-slate-700 dark:border-slate-200 border-indigo-700 rounded-md p-1" placeholder="Will automatically be filled..."/>

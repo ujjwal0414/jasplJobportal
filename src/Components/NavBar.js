@@ -14,7 +14,7 @@ const NavBar=(props)=>{
                 <div className="ml-4 font-bold text-xl select-none dark:text-white"><span className="text-blue-600 text-2xl">J</span>ASPL</div></div>
             <div className="flex items-center">
             <div className="flex mr-3"><button onClick={()=>{props.setStatus(!props.status)}} className="flex items-center gap-1 p-2 rounded-md bg-indigo-600 text-white"><FaPlus/>New Job</button></div>
-            <div className="mr-3 font-semibold select-none cursor-not-allowed dark:text-[#b7bac1]" onClick={()=>{localStorage.removeItem("jasplComm");props.setSignShow(true)}}>Logout</div>
+            <div className="mr-3 font-semibold select-none cursor-pointer dark:text-[#b7bac1]" onClick={()=>{localStorage.removeItem("jasplComm");props.setSignShow(true)}}>Logout</div>
             <div className="hidden md:block" onClick={()=>{props.setDarkModeStat(!props.darkModeStat)}}><CustomizedSwitches open={props.darkModeStat} /></div>
             </div>
             </div>
