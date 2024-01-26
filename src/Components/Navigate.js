@@ -5,6 +5,8 @@ import { Project } from "./projects";
 import { PiMapPinDuotone } from "react-icons/pi";
 import { Update } from "./uodates";
 import { GrUpdate } from "react-icons/gr";
+import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { ChatCommunity } from "./chatsCommunity";
 import CustomizedSwitches from "./muiSwitch";
 const Navigate=(props)=>{
    
@@ -28,6 +30,11 @@ const Navigate=(props)=>{
             name:"Page Updates",
             Icon:<GrUpdate  className=" ml-3 mr-2"/>,
             component:<Update index={3}/>
+        },
+        {
+            name:"Community",
+            Icon:<IoChatboxEllipsesOutline  className=" ml-3 mr-2"/>,
+            component:<ChatCommunity index={4}/>
         }
 
     ]

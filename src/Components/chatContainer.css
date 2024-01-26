@@ -1,0 +1,3 @@
+.chatContainer::-webkit-scrollbar{
+    appearance: none;
+}

@@ -3,12 +3,14 @@ import { Navigators } from './Components/Navigators';
 import { useEffect, useState } from 'react';
 import { ImCross } from "react-icons/im";
 import { FileSection } from './Components/FileSection';
+import { SignIn } from './Components/SignBox';
 
 function App() {
   let [newStatus,setStatus]=useState(false)
   let [desc,setDesc]=useState(false);
   let [showSideBar,setSideBar]=useState(false);
   let [themeMode,setTheme]=useState(false);
+  let [signBox,setBox]=useState(true);
   useEffect(()=>{
     setDesc(false)
     let theme=localStorage.getItem("jasplTheme");
@@ -56,7 +58,12 @@ useEffect(()=>{
      }
      
 },[themeMode])
-
+useEffect(()=>{
+  if(localStorage.getItem("jasplComm")){
+   setBox(false)
+    
+  }
+},[])
   return (
     <> 
     {newStatus &&<div className="absolute top-0 left-0 w-[100%] h-[100vh] bg-slate-100  dark:bg-[#293555] z-30 flex  justify-center items-center ">
@@ -82,8 +89,13 @@ useEffect(()=>{
 
 }  
 /
-    <NavBar darkModeStat={themeMode} setDarkModeStat={setTheme} status={newStatus} setStatus={setStatus} setSideBar={setSideBar} showside={showSideBar} />
+    <NavBar setSignShow={setBox} darkModeStat={themeMode} setDarkModeStat={setTheme} status={newStatus} setStatus={setStatus} setSideBar={setSideBar} showside={showSideBar} />
     <Navigators darkModeStat={themeMode} setDarkModeStat={setTheme} showside={showSideBar} setSideBar={setSideBar}  />
+   
+{
+  signBox && <SignIn show={signBox} setShow={setBox} />
+}
+
     </>
   );
 }
