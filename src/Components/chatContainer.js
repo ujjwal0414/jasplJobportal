@@ -111,7 +111,7 @@ let ChatContainer = ({ user }) => {
                
             </div>
             <div className="input md:h-[8vh] h-[8vh] p-3  flex items-center justify-center">
-                <input onKeyDown={sendMessString} value={message} onChange={(e) => { setMessage(e.target.value) }} type="text" placeholder="Message..." className="md:w-[70%] w-[80%] mr-3 dark:text-white dark:bg-[#485c8a] dark:placeholder:text-white dark:border-slate-200 rounded-md outline-none border-2 border-slate-500 p-1  md:p-2" />
+                <input onKeyDown={sendMessString} value={message} onChange={(e) => { setMessage(e.target.value) }} type="text" placeholder="Message..." className="md:w-[70%] w-[90%] mr-3 dark:text-white dark:bg-[#485c8a] dark:placeholder:text-white dark:border-slate-200 rounded-md outline-none border-2 border-slate-500 p-1 px-3  md:p-2" />
                 <button className="scale-150 dark:text-slate-200 text-slate-700" onClick={() => { sendMess() }}><GrSend /></button>
             </div>
         </div>
