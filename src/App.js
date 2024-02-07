@@ -11,18 +11,7 @@ function App() {
   let [showSideBar,setSideBar]=useState(false);
   let [themeMode,setTheme]=useState(false);
   let [signBox,setBox]=useState(true);
-  let fetchData=async()=>{
-    try {
-      let resp=await fetch("https://jagriti-app-55d24f6e8f52.herokuapp.com/admin/events",{
-        mode:"no-cors"
-      });
-    resp=await resp.json();
-    console.log(resp);
-    } catch (error) {
-      console.log(error);
-    }
-    
-  }
+ 
   useEffect(()=>{
     setDesc(false)
     let theme=localStorage.getItem("jasplTheme");
@@ -35,7 +24,7 @@ function App() {
       localStorage.setItem("jasplTheme",false)
     }
     
-   fetchData()
+  
     
   },[])
   useEffect(()=>{
